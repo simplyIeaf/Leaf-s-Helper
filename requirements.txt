@@ -1,0 +1,4 @@
+nextcord
+pytz
+flask
+requests
