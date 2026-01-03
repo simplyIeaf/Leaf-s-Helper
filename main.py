@@ -15,8 +15,8 @@ from keep_alive import keep_alive
 PARIS_TZ = pytz.timezone('Europe/Paris')
 OWNER_NAME = "simplyieaf"
 REPO = "simplyIeaf/Leaf-s-Helper"
-FILE_PATH = "scheduled_posts.json"
-PROJECT_URL = "okay-jourdan-leaf54355666654-f8412d06.koyeb.app/"
+FILE_PATH = "bot_data.json"
+PROJECT_URL = "https://name.koyeb.app"
 
 profanity.load_censor_words()
 
@@ -69,6 +69,7 @@ class SimpleBot(commands.Bot):
         super().__init__(*args, **kwargs)
 
     async def on_ready(self):
+        await self.sync_all_application_commands()
         self.main_loop.start()
         print(f"Logged in as {self.user}")
 
@@ -173,7 +174,7 @@ async def purgeuser(interaction: Interaction, user: nextcord.Member, timeframe: 
         for channel in interaction.guild.text_channels:
             try:
                 def check(m): return m.author == user and m.created_at.replace(tzinfo=None) > limit
-                purged = await channel.purge(limit=10000, check=check)
+                purged = await channel.purge(limit=100, check=check)
                 deleted += len(purged)
             except: continue
         await interaction.followup.send(f"Purged {deleted} messages.")
