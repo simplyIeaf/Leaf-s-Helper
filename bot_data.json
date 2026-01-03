@@ -2,6 +2,11 @@
     "posts": [],
     "messages": [],
     "autoroles": [],
-    "automod": {},
+    "automod": {
+        "1418877984755941397": {
+            "ai_mod": true,
+            "no_links": true
+        }
+    },
     "welcome_channel": null
 }
