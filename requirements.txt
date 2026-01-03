@@ -2,3 +2,5 @@ nextcord
 pytz
 flask
 requests
+better_profanity
+dnspython
