@@ -1,0 +1,17 @@
+{
+    "posts": [
+        {
+            "id": "19fcf4",
+            "channel_id": 1418933364773359616,
+            "title": "ererer",
+            "content": "errrere",
+            "pings": "",
+            "timestamp": 1767464340.0,
+            "readable": "03/01/26 07:19 PM"
+        }
+    ],
+    "messages": [],
+    "autoroles": [],
+    "automod": {},
+    "welcome_channel": null
+}
